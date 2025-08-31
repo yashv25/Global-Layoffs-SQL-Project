@@ -92,12 +92,6 @@ where ranking <= 5
 ;
 
 SELECT stage, SUM(total_laid_off) AS total_layoffs
-FROM 
-WHERE total_laid_off IS NOT NULL AND stage IS NOT NULL
-GROUP BY stage
-ORDER BY total_layoffs DESC;
-
-SELECT stage, SUM(total_laid_off) AS total_layoffs
 FROM layoffs_staging2
 WHERE total_laid_off IS NOT NULL AND stage IS NOT NULL
 GROUP BY stage
